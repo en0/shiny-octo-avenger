@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>test</title>
+    </head>
+    <body>
+        <a href="{{ links['self']['href'] }}">{{ model['name'] }}</a> - <a href="mailto:{{ model['email'] }}">{{ model['email'] }}</a></br>
+        {% if 'ht:spouse' in links %}
+        <label>Spouse:</label>
+        <a href="{{ model['_links']['ht:spouse']['href'] }}">{{model['_links']['ht:spouse']['name']}}</a>
+        {% endif %}
+        {% if '_embedded' in model %}
+        <ul>
+            {% for child in embedded['ht:children']: %}
+            <li><a href='{{ child['_links']['self']['href'] }}'>{{ child['name'] }}</a></li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </body>
+</html>

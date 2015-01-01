@@ -320,3 +320,8 @@ app.controller("modalCtrl", ['$scope', '$modalInstance', 'item', function($scope
 app.controller("nullCtrl", ['$scope', function($scope) {
     $scope.setMenu(null);
 }]);
+
+app.controller("testingCtrl", ['$scope', function($scope) {
+    $scope.setMenu(null);
+    console.log('testing');
+}]);

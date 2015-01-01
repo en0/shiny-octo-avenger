@@ -18,6 +18,7 @@ app.config(['$routeProvider', function($routeProvider) {
         .when("/register", {templateUrl: "partials/register.php", controller: "registerCtrl", isPublic: true})
         .when("/register/complete", {templateUrl: "partials/register_complete.php", controller: "registerCtrl", isPublic: true})
         .when("/404", {templateUrl: "partials/404.php", controller: "nullCtrl", isPublic: true})
+        .when("/testing", { templateUrl: "partials/testing.php", controller: "testingCtrl", isPublic: true})
         .otherwise({ redirectTo: '/404' });
 }]);
 
